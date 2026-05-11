@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+output/
+.DS_Store
+figures_cache.json
+Procfile
+app.py
+runtime.txt

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}{{ bio.name }} – Home{% endblock %}
+{% block content %}
+<div class="page-content">
+
+  <div class="bio-layout">
+
+    <img src="static/me-NES.png" alt="Byron C. Wallace" class="cart-img">
+
+    <!-- Bio text + research interests together -->
+    <div class="bio-text">
+      <h1>{{ bio.name }}</h1>
+      <div class="bio-position">{{ bio.title_line }}</div>
+      <div class="bio-interests">
+        <div class="bio-interests-label">Research Interests</div>
+        <p>{{ interests }}</p>
+      </div>
+
+      <div class="bio-links">
+        {% if bio.email %}<a class="bio-link" href="mailto:{{ bio.email }}">[MAIL]</a>{% endif %}
+        {% if bio.scholar %}<a class="bio-link" href="{{ bio.scholar }}" target="_blank">[SCHOLAR]</a>{% endif %}
+        {% if bio.bluesky %}<a class="bio-link" href="{{ bio.bluesky }}" target="_blank">[BSKY]</a>{% endif %}
+        {% if bio.twitter %}<a class="bio-link" href="{{ bio.twitter }}" target="_blank">[X]</a>{% endif %}
+      </div>
+    </div>
+
+  </div>
+
+  <section>
+    <h2>Recent Papers</h2>
+    <ul class="pub-list">
+      {% for pub in recent_papers %}
+      <li class="pub-item">
+        <span class="pub-title">
+          {% if pub.url %}<a href="{{ pub.url }}" target="_blank">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}
+        </span>
+        <span class="pub-authors">{{ pub.authors }}</span>
+        <span class="pub-venue"><em>{{ pub.venue }}</em>{% if pub.year %}, {{ pub.year }}{% endif %}.</span>
+      </li>
+      {% endfor %}
+    </ul>
+    <p class="see-all"><a href="publications.html">► VIEW ALL PUBLICATIONS</a></p>
+  </section>
+
+</div>
+{% endblock %}

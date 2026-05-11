@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}{{ bio.name }} – Publications{% endblock %}
+{% block content %}
+<div class="page-content">
+  <h1>Publications</h1>
+
+  <nav class="section-nav">
+    {% for kind in pub_kinds %}
+    <a href="#{{ kind }}">{{ pubs[kind].label }}</a>
+    {% endfor %}
+  </nav>
+
+  {% for kind in pub_kinds %}
+  {% set group = pubs[kind] %}
+  <section id="{{ kind }}">
+    <h2>{{ group.label }}</h2>
+
+    {% set current_year = namespace(val=0) %}
+    <ol class="pub-list" reversed>
+    {% for pub in group.entries %}
+      {% if pub.year_int != current_year.val %}
+        {% if current_year.val != 0 %}</ol><ol class="pub-list" reversed>{% endif %}
+        {% set current_year.val = pub.year_int %}
+        <li class="year-divider">{{ pub.year_int if pub.year_int > 0 else "Undated" }}</li>
+      {% endif %}
+      <li class="pub-item">
+        <span class="pub-title">
+          {% if pub.url %}<a href="{{ pub.url }}" target="_blank">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}
+        </span>
+        <span class="pub-authors">{{ pub.authors }}</span>
+        <span class="pub-venue">
+          <em>{{ pub.venue }}</em>{% if pub.volume %}, {{ pub.volume }}{% if pub.number %}({{ pub.number }}){% endif %}{% endif %}{% if pub.pages %}, {{ pub.pages }}{% endif %}{% if pub.year %}, {{ pub.year }}{% endif %}.
+        </span>
+        {% if pub.note %}<span class="pub-note">{{ pub.note }}</span>{% endif %}
+      </li>
+    {% endfor %}
+    </ol>
+  </section>
+  {% endfor %}
+
+</div>
+{% endblock %}

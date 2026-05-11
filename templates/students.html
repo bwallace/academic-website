@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}{{ bio.name }} – Students{% endblock %}
+{% block content %}
+<div class="page-content">
+  <h1>Advising</h1>
+
+  <section>
+    <h2>Current PhD Students</h2>
+    <div class="player-select-screen">
+      <div class="player-select-label">◄ SELECT YOUR CHARACTER ►</div>
+      <ul class="student-grid">
+        {% for s in current_students %}
+        <li class="student-card">
+          {% if s.link %}<a class="student-card-link" href="{{ s.link }}" target="_blank">{% endif %}
+          {% if s.image %}
+          <img src="static/students/{{ s.image }}" alt="{{ s.name }}">
+          {% else %}
+          <div class="student-img-placeholder"></div>
+          {% endif %}
+          <div class="student-card-body">
+            <span class="student-name">{{ s.name }}</span>
+            {% if s.info %}<div class="student-info">{{ s.info }}</div>{% endif %}
+            {% if s.awards %}<div class="student-award">{{ s.awards }}</div>{% endif %}
+          </div>
+          {% if s.link %}</a>{% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>PhD Alumni</h2>
+    <ul class="student-grid">
+      {% for s in alumni %}
+      <li class="student-card alumni-card">
+        {% if s.link %}<a class="student-card-link" href="{{ s.link }}" target="_blank">{% endif %}
+        {% if s.image %}
+        <img src="static/students/{{ s.image }}" alt="{{ s.name }}">
+        {% else %}
+        <div class="student-img-placeholder"></div>
+        {% endif %}
+        <div class="student-card-body">
+          <span class="student-name">{{ s.name }}</span>
+          {% if s.graduation %}<span class="year-badge">{{ s.graduation }}</span>{% endif %}
+          {% if s.thesis %}<div class="thesis-title">{{ s.thesis }}</div>{% endif %}
+          {% if s.now %}<div class="student-now">► {{ s.now }}</div>{% endif %}
+          {% if s.awards %}<div class="student-award">{{ s.awards }}</div>{% endif %}
+        </div>
+        {% if s.link %}</a>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+</div>
+{% endblock %}

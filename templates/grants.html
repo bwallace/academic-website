@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}{{ bio.name }} – Grants{% endblock %}
+{% block content %}
+<div class="page-content">
+  <h1>Research Support</h1>
+
+  <p class="note">
+    Listed in reverse chronological order. Titles in <strong>bold</strong> indicate grants where I am PI or Co-PI.
+    Dollar amounts are best estimates of total direct award figures.
+  </p>
+
+  <ul class="grant-list">
+    {% for g in grants %}
+    <li class="grant-item">
+      <div class="grant-title">
+        {% if g.role and ('Principal Investigator' in g.role or 'Co-Principal' in g.role or 'PD/PI' in g.role) %}
+        <strong>{{ g.title }}</strong>
+        {% else %}
+        {{ g.title }}
+        {% endif %}
+      </div>
+      <div class="grant-meta">
+        {% if g.funder %}<span><strong>Funder:</strong> {{ g.funder }}</span>{% endif %}
+        {% if g.role %}<span><strong>Role:</strong> {{ g.role }}</span>{% endif %}
+        {% if g.period %}<span><strong>Period:</strong> {{ g.period }}</span>{% endif %}
+        {% if g.amount %}<span><strong>Amount:</strong> {{ g.amount }}</span>{% endif %}
+        {% if g.pi %}<span><strong>PI:</strong> {{ g.pi }}</span>{% endif %}
+        {% if g.collaborators %}<span><strong>Collaborators:</strong> {{ g.collaborators }}</span>{% endif %}
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+
+</div>
+{% endblock %}

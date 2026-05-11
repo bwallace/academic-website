@@ -1,0 +1,10 @@
+title:
+Professor, Khoury College of Computer Sciences, Northeastern University
+
+interests:
+I work on natural language processing and machine learning, with applications in healthcare and other high-stakes domains. I am especially interested in model interpretability, analysis, and evaluation.
+
+email: b.wallace@northeastern.edu
+scholar: https://scholar.google.com/citations?user=KTzRHmwAAAAJ&hl=en&oi=ao
+bluesky: https://bsky.app/profile/byron.bsky.social
+twitter: https://x.com/byron_c_wallace

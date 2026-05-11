@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% block title %}{{ bio.name }} – Teaching{% endblock %}
+{% block content %}
+<div class="page-content">
+  <h1>Teaching</h1>
+
+  <div class="teaching-award">
+    <div class="teaching-award-label">★ AWARD ★</div>
+    <div class="teaching-award-name">Joel and Ruth Spira Excellence in Teaching Award</div>
+    <div class="teaching-award-year">Northeastern University · 2021</div>
+  </div>
+
+  <section>
+    <h2>Courses</h2>
+    <ul class="course-list">
+
+     <li class="course-item">
+        <div class="course-header">
+          <span class="course-code">CS 7180</span>
+          <a class="course-name" href="https://www.ccs.neu.edu/home/byron/cs7180/" target="_blank">Actionable Interpretability</a>
+        </div>
+        <div class="course-meta">Spring 2026</div>
+        <div class="course-desc">Graduate seminar on modern interpretability research, with an emphasis on making methods "actionable", i.e., practically useful.</div>
+      </li>
+
+
+      <li class="course-item">
+        <div class="course-header">
+          <span class="course-code">DS 4440</span>
+          <a class="course-name" href="https://course.ccs.neu.edu/ds4440f24/" target="_blank">Practical Neural Networks</a>
+        </div>
+        <div class="course-meta">Multiple offerings</div>
+        <div class="course-desc">Covers modern deep learning theory and practice, including recurrent, convolutional, and transformer architectures (up to modern Large Language Models).</div>
+      </li>
+
+
+      <li class="course-item">
+        <div class="course-header">
+          <span class="course-code">DS 2000</span>
+          <span class="course-name">Programming with Data</span>
+        </div>
+        <div class="course-meta">Multiple offerings</div>
+        <div class="course-desc">Introduction to programming and data science in Python. Covers data manipulation, visualization, and basic statistical reasoning through hands-on homeworks.</div>
+      </li>
+
+
+      <li class="course-item">
+        <div class="course-header">
+          <span class="course-code">DS 4420</span>
+          <span class="course-name">Machine Learning 2</span>
+        </div>
+        <div class="course-meta">Multiple offerings</div>
+        <div class="course-desc">Probabilistic machine learning including Bayesian methods, graphical models, approximate inference, and unsupervised learning techniques.</div>
+      </li>
+
+      <li class="course-item">
+        <div class="course-header">
+          <span class="course-code">CS 4100</span>
+          <span class="course-name">Artificial Intelligence</span>
+        </div>
+        <div class="course-meta">Spring 2017</div>
+        <div class="course-desc">Undergraduate survey of AI covering search, constraint satisfaction, knowledge representation, planning, and an introduction to machine learning.</div>
+      </li>
+
+      <li class="course-item">
+        <div class="course-header">
+          <span class="course-code">CS 2500</span>
+          <span class="course-name">Fundamentals of Computer Science 1</span>
+        </div>
+        <div class="course-meta">Fall 2017</div>
+        <div class="course-desc">Introduction to functional programming and program design. Covers recursion, higher-order functions, and systematic program construction.</div>
+      </li>
+
+
+      <li class="course-item course-item--other">
+        <div class="course-header">
+          <span class="course-code course-code--alt">150AIH</span>
+          <span class="course-name">AI in Health Informatics</span>
+        </div>
+        <div class="course-meta">Tufts University · co-taught with Kevin Small</div>
+        <div class="course-desc">Graduate course on artificial intelligence methods applied to health informatics, covering NLP, clinical text mining, and evidence-based medicine.</div>
+      </li>
+
+    </ul>
+  </section>
+
+</div>
+{% endblock %}

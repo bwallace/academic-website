@@ -1,0 +1,116 @@
+# Current students and alumni.
+# Place photos in static/students/ and reference by filename.
+#
+# Fields:
+#   status:     current  or  alumni
+#   image:      filename in static/students/  (e.g. jane.jpg)
+#   link:       personal website URL (optional)
+#   info:       research area or brief note (optional)
+#   graduation: year degree awarded (alumni only)
+#   thesis:     dissertation title (alumni only)
+#   now:        current position (alumni only)
+#   awards:     fellowship, award, or honor (optional, any student)
+
+[Hiba Ahsan]
+status: current
+image: hiba.jpg
+link: https://hibaahsan.github.io/
+
+[Millicent Li]
+status: current
+image: millicent.jpg
+link: https://millicentli.github.io/
+
+[Sheridan Feucht]
+status: current
+image: sheridan.jpeg
+link: https://sfeucht.github.io/
+info: Co-advised with David Bau
+
+[Zihao (Gavin) Yang]
+status: current
+image: gavin.jpg
+link: https://redagavin.github.io/
+
+[Xilin (Rice) Wang]
+status: current
+image: rice.jpeg
+
+[Hye Sun Yun]
+status: alumni
+image: hyesun.webp
+link: https://www.hyesunyun.com/
+graduation: 2026
+thesis: Advancing Health Information Access with LLMs
+awards: Khoury College PhD Teaching Award
+
+[Sanjana Ramprasad]
+status: alumni
+image: sanjana.jpg
+link: https://srampras.me/
+graduation: 2026
+thesis: Rethinking Factuality Assessment: Characterizing and Evaluating Hallucinations Across Specialized Domains
+now: Postdoc, Stanford
+
+[Chantal Shaib]
+status: alumni
+image: chantal.png
+link: https://cshaib.github.io/
+graduation: 2026
+thesis: What Makes Large Language Model Text Distinct? Lexical and Syntactic Markers of Style
+now: Postdoc, MIT
+awards: Outstanding PhD Research Award
+
+[Somin Wadhwa]
+status: alumni
+graduation: 2025
+thesis: From Large to Small: Distillation in the Age of Large Language Models
+image: somin.jpg
+now: Applied Scientist II, Core AI @ Qualtrics
+
+
+[Jay DeYoung]
+status: alumni
+image: jay.jpeg
+link: https://scholar.google.com/citations?user=f8aP6RMAAAAJ
+graduation: 2024
+thesis: Automation Assistance For Systematic Reviewers
+now: Young Investigator at the Allen Institute for AI (AI2)
+
+[Denis Jered McInerney]
+status: alumni
+image: jered.jpg
+graduation: 2024
+thesis: An Interface for Clinicians: Finding Crucial Information with Language Models
+in Electronic Health Records
+now: Principal Research Scientist at CodaMetrix
+
+[Ben Nye]
+status: alumni
+image: ben.jpg
+link: https://www.coloradocollege.edu/basics/contact/directory/people/nye_ben.html
+graduation: 2022
+thesis: What Does the Evidence Say? Automatic Information Extraction from Medical Trial Reports
+now: Assistant Professor of CS (TT), Colorado College
+awards: PhD Teaching Award
+
+[Sarthak Jain]
+status: alumni
+image: sarthak.jpg
+link: https://successar.github.io/
+graduation: 2022
+thesis: The Model thinks What?! Interpreting Deep NLP models with Rationales and Influence
+now: ML Scientist at Profluent
+
+[Ye Zhang]
+status: alumni
+graduation: 2019
+thesis: Neural NLP Models Under Low-Supervision Scenarios
+now: Google DeepMind
+
+[An Nguyen]
+status: alumni
+graduation: 2019
+thesis: Probabilistic Modeling with Human Factors in Machine Learning
+
+
