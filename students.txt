@@ -36,6 +36,11 @@ link: https://redagavin.github.io/
 status: current
 image: rice.jpeg
 
+[Alberto Mario Ceballos-Arroyo]
+status: current
+link: https://alceballosa.github.io/
+image: alberto.jpg
+
 [Hye Sun Yun]
 status: alumni
 image: hyesun.webp
