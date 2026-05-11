@@ -764,6 +764,8 @@ def generate(cv_dir, output_dir, fetch_arxiv=False):
            active="students", current_students=current_students, alumni=alumni, **ctx)
     render(env, "teaching.html", output_dir / "teaching.html",
            active="teaching", **ctx)
+    render(env, "service.html", output_dir / "service.html",
+           active="service", **ctx)
     print("Done.")
 
 

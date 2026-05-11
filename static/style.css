@@ -534,6 +534,43 @@ a.student-name:hover { color: var(--red); }
   border-color: rgba(200, 150, 0, 0.5);
 }
 
+/* ── Service ─────────────────────────────────────────────────────────────── */
+
+.service-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+
+.service-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  padding: 0.7rem 0.8rem;
+  background: var(--bg-card);
+  border: 2px solid var(--border);
+  border-left: 5px solid var(--blue);
+}
+
+.service-venue {
+  font-family: var(--pixel);
+  font-size: 7px;
+  color: #fff;
+  background: var(--blue);
+  padding: 4px 7px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  min-width: 4rem;
+  text-align: center;
+  margin-top: 2px;
+}
+
+.service-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.service-role { font-size: 14px; color: var(--text); font-weight: 600; line-height: 1.4; }
+
+.service-meta { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
 /* ── Teaching ────────────────────────────────────────────────────────────── */
 
 .teaching-award {
