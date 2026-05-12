@@ -40,6 +40,7 @@ image: rice.jpeg
 status: current
 link: https://alceballosa.github.io/
 image: alberto.jpg
+info: Co-advised with Huaizu Jiang
 
 [Hye Sun Yun]
 status: alumni
@@ -48,6 +49,7 @@ link: https://www.hyesunyun.com/
 graduation: 2026
 thesis: Advancing Health Information Access with LLMs
 awards: Khoury College PhD Teaching Award
+info: Co-advised with Tim Bickmore
 
 [Sanjana Ramprasad]
 status: alumni
