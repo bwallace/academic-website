@@ -47,6 +47,7 @@ status: alumni
 image: hyesun.webp
 link: https://www.hyesunyun.com/
 graduation: 2026
+now: Assistant Professor of Data Science Program and CS (TT), Lafeyette College
 thesis: Advancing Health Information Access with LLMs
 awards: Khoury College PhD Teaching Award
 info: Co-advised with Tim Bickmore
