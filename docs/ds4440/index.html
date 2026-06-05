@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DS 4440 // Practical Neural Networks // Fall 2026</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="course-id">DS 4440 &nbsp;·&nbsp; Northeastern University &nbsp;·&nbsp; Khoury College of Computer Sciences</div>
+    <div class="course-title">Practical Neural Networks &nbsp;·&nbsp; Fall 2026</div>
+  </div>
+</header>
+
+<div class="layout">
+
+  <!-- ── Sidebar ── -->
+  <aside class="sidebar">
+
+    <div class="sidebar-section">
+      <div class="sidebar-heading">Course Details</div>
+
+      <div class="sidebar-label">Instructor</div>
+      <address>
+        <a href="https://byronwallace.com">Byron Wallace</a><br>
+        Office: 2208 <a href="https://www.google.com/maps/place/177+Huntington+Ave,+Boston,+MA+02115">177 Huntington</a><br>
+        Office hours: TBD<br>
+        <a href="mailto:b.wallace@northeastern.edu">b.wallace@northeastern.edu</a>
+      </address>
+
+      <div class="sidebar-label">Teaching Assistant</div>
+      <address>
+        <a href="https://millicentli.github.io/">Millicent Li</a><br>
+        PhD Student
+      </address>
+
+      <div class="sidebar-label">Time &amp; Location</div>
+      <p>TBD</p>
+
+      <div class="sidebar-label">Discussion</div>
+      <p><a href="#">Piazza</a> (link TBD)</p>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-heading">Textbook</div>
+      <a href="https://d2l.ai/">
+        <img class="book-cover" src="https://d2l.ai/_images/front.png" alt="Dive into Deep Learning">
+      </a>
+      <p><a href="https://d2l.ai/">Dive into Deep Learning</a> — free online reference for the course.</p>
+    </div>
+
+  </aside>
+
+  <!-- ── Main ── -->
+  <main class="main">
+
+    <section>
+      <h2>Course Description</h2>
+      <p>This course is a hands-on introduction to modern neural network ("deep learning") tools and methods. The course will cover the fundamentals of neural networks, and introduce standard and new architectures: from simple feed-forward networks to recurrent neural networks. We will cover stochastic gradient descent and backpropagation, along with related fitting techniques.</p>
+      <p>We will place a particular emphasis on using these technologies in practice via modern toolkits, specifically <a href="https://pytorch.org/">PyTorch</a>. While PyTorch will be our toolkit of choice, a key objective is to provide sufficient familiarity with the underlying methods and programming paradigms such that switching to new frameworks is no great obstacle — important given the rapid pace of development in this space.</p>
+      <p>A significant component of this course will focus on <strong>interpretability</strong>: understanding <em>how</em> generative models manage to realize the functionality they offer. We will make use of the <a href="https://ndif.us/"><strong>National Deep Inference Fabric (NDIF)</strong></a>, a Northeastern-led project.</p>
+    </section>
+
+    <section>
+      <h2>Logistics</h2>
+
+      <h3>Grading</h3>
+      <table class="grading-table">
+        <tr><td>35%</td><td>In-class quizzes and exercises</td></tr>
+        <tr><td>25%</td><td>Midterm</td></tr>
+        <tr><td>40%</td><td>Final project</td></tr>
+      </table>
+
+      <h3>Prerequisites</h3>
+      <p>Prior exposure to machine learning is recommended. Working knowledge of <a href="https://python.org">Python</a> is required. Familiarity with linear algebra, basic calculus, and probability will be largely assumed, though we will review key prerequisites.</p>
+
+      <h3>Midterm</h3>
+      <p>An in-class midterm covering the foundations of deep learning.</p>
+
+      <h3>Projects</h3>
+      <p>A major component of the course is a project completed in pairs. Projects must concern some aspect of <em>model interpretability</em> and will use <a href="https://ndif.us/">NDIF</a>.</p>
+
+      <h3>Academic Integrity</h3>
+      <p>Consulting online resources and LLMs for programming assignments is permitted, but submitting any solution in its entirety without understanding it is not. You <strong>must</strong> list all sources (URLs, language models) consulted for every assignment and must be able to explain all code you submit. See the <a href="https://www.northeastern.edu/osccr/academic-integrity-policy/">Northeastern Academic Integrity Policy</a> for full details.</p>
+    </section>
+
+    <section>
+      <h2>Schedule</h2>
+      <p style="font-size:13px; color: #64748b; margin-bottom: 0.8rem;">Dates and materials will be updated as the semester progresses. Readings reference <a href="https://d2l.ai/">d2l</a> unless otherwise noted.</p>
+
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            <th class="col-date">Date</th>
+            <th class="col-topic">Topic</th>
+            <th class="col-readings">Readings</th>
+            <th class="col-due">Due</th>
+            <th class="col-materials">Materials</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td class="col-date">9/2 (W)</td>
+            <td class="col-topic">Course aims, logistics; Review of supervised learning / Perceptron</td>
+            <td class="col-readings"><a href="https://d2l.ai/chapter_introduction/index.html">d2l: Introduction</a>; <a href="https://blogs.umass.edu/brain-wars/files/2016/03/rosenblatt-1957.pdf">Original Perceptron (1957)</a></td>
+            <td class="col-due">Join Piazza</td>
+            <td class="col-materials"><a href="lecture-materials/ds4440-intro-logistics-f26.pdf">Intro slides</a> · <a href="lecture-materials/ds4440-f26-l1-supervised-review.pdf">Notes</a> · <a href="https://colab.research.google.com/drive/1jU8h2tROFl_t50agdfIjkXhXmMG3_dhw">Notebook</a></td>
+          </tr>
+
+          <tr>
+            <td class="col-date">9/8 (M)</td>
+            <td class="col-topic">Logistic Regression and Optimization via SGD</td>
+            <td class="col-readings"><a href="https://d2l.ai/chapter_preliminaries/index.html">d2l: Preliminaries</a></td>
+            <td class="col-due"></td>
+            <td class="col-materials"><a href="lecture-materials/ds4440-f26-l2-linear-models.pdf">Notes</a> · <a href="https://colab.research.google.com/drive/1Em2jswhfgoE5FHnwT_9BJJiew3Ji-9he?usp=sharing">Notebook</a></td>
+          </tr>
+
+          <tr>
+            <td class="col-date">9/10 (W)</td>
+            <td class="col-topic">Beyond Linear Models: The Multi-Layer Perceptron</td>
+            <td class="col-readings"><a href="https://d2l.ai/chapter_multilayer-perceptrons/mlp.html">d2l: MLPs (4.1)</a></td>
+            <td class="col-due">HW 1 due</td>
+            <td class="col-materials"><a href="lecture-materials/ds4440-f26-l3-nonlinear.pdf">Notes</a> · <a href="https://colab.research.google.com/drive/1R2WRlFCM_ZXSaQ1DEjiUt1nKS_446naL?usp=sharing">Notebook</a></td>
+          </tr>
+
+          <tr>
+            <td class="col-date">9/15 (M)</td>
+            <td class="col-topic">Abstractions: Layers and Computation Graphs</td>
+            <td class="col-readings"><a href="https://d2l.ai/chapter_builders-guide/model-construction.html">d2l: Layers and blocks</a></td>
+            <td class="col-due"></td>
+            <td class="col-materials"><a href="lecture-materials/ds4440-f26-l4-comp-graphs.pdf">Notes</a> · <a href="https://colab.research.google.com/drive/1VPe3-pTjEFiNyxBGCTD8pCAxGEuqyFJ2?usp=sharing">Notebook</a></td>
+          </tr>
+
+          <tr>
+            <td class="col-date">9/17 (W)</td>
+            <td class="col-topic">Backpropagation I</td>
+            <td class="col-readings"><a href="https://d2l.ai/chapter_preliminaries/autograd.html">d2l: Autodiff</a>; <a href="http://colah.github.io/posts/2015-08-Backprop/">Colah's blog</a>; <a href="https://www.nature.com/articles/323533a0.pdf">Rumelhart et al. (1986)</a></td>
+            <td class="col-due"></td>
+            <td class="col-materials"><a href="lecture-materials/ds4440-f26-l5-backprop1.pdf">Notes</a> · <a href="https://colab.research.google.com/drive/1zKaEbI87vfxMuopTScuhJoRD2L3d_A2F?usp=sharing">Notebook</a></td>
+          </tr>
+
+          <tr>
+            <td class="col-date">9/22 (M)</td>
+            <td class="col-topic">Backpropagation II</td>
+            <td class="col-readings"><a href="https://d2l.ai/chapter_multilayer-perceptrons/backprop.html">d2l: Backprop</a></td>
+            <td class="col-due"></td>
+            <td class="col-materials"><a href="lecture-materials/ds4440-f26-l6-backprop2.pdf">Notes</a> · <a href="https://colab.research.google.com/drive/1ssInK3lLQBj80nI_PKEnV22ihf8pPM19?usp=sharing">Notebook</a></td>
+          </tr>
+
+          <tr>
+            <td class="col-date">9/24 (W)</td>
+            <td class="col-topic">Optimizer matters: Training Neural Networks in Practice</td>
+            <td class="col-readings"><a href="https://d2l.ai/chapter_optimization/optimization-intro.html">d2l: Optimization</a></td>
+            <td class="col-due">HW 2 due</td>
+            <td class="col-materials"><a href="lecture-materials/ds4440-f26-l7-optimization.pdf">Notes</a> · <a href="https://colab.research.google.com/drive/1wAzDUdIC-Hb5fpS5UBDKH-S-aNG-25wO?usp=sharing">Notebook</a></td>
+          </tr>
+
+          <tr>
+            <td class="col-date">9/29 (M)</td>
+            <td class="col-topic">Learning representations of discrete things: Embeddings</td>
+            <td class="col-readings"><a href="https://d2l.ai/chapter_natural-language-processing-pretraining/word2vec.html">d2l: Word embeddings (14.1)</a></td>
+            <td class="col-due"></td>
+            <td class="col-materials"><a href="lecture-materials/ds4440-f26-l8-embeddings.pdf">Notes</a> · <a href="https://colab.research.google.com/drive/1tsoFlbzfGxiYHRubmVUD-HMjRkaFEdWe?usp=sharing">Notebook</a></td>
+          </tr>
+
+          <tr>
+            <td class="col-date">10/1 (W)</td>
+            <td class="col-topic">Convolutional Neural Networks (CNNs)</td>
+            <td class="col-readings"><a href="https://d2l.ai/chapter_convolutional-neural-networks/index.html">d2l: CNNs (6.1)</a></td>
+            <td class="col-due"></td>
+            <td class="col-materials"><a href="lecture-materials/ds4440-f26-l9-ConvNets.pdf">Notes</a> · <a href="https://colab.research.google.com/drive/1m09SHkUlli0KesS53ChS8Em1-CUd8nHC?usp=sharing">Notebook</a></td>
+          </tr>
+
+          <tr>
+            <td class="col-date">10/6 (M)</td>
+            <td class="col-topic">Stacking ConvNets, residual connections, and other tricks</td>
+            <td class="col-readings"><a href="https://d2l.ai/chapter_convolutional-neural-networks/conv-layer.html">d2l: CNNs (6.2–6.5)</a>; <a href="https://d2l.ai/chapter_convolutional-modern/index.html">Modern CNNs (7.1, 7.5–7.7)</a></td>
+            <td class="col-due"></td>
+            <td class="col-materials"><a href="lecture-materials/ds4440-f26-l10-ConvNets2.pdf">Notes</a> · <a href="https://colab.research.google.com/drive/1y_6cBKHQl9mfv5CyxQpkR7heW2wXuKdE?usp=sharing">Notebook</a></td>
+          </tr>
+
+          <tr>
+            <td class="col-date">10/8 (W)</td>
+            <td class="col-topic">Recurrent Neural Networks I</td>
+            <td class="col-readings"><a href="https://d2l.ai/chapter_recurrent-neural-networks/sequence.html">d2l: RNNs (8.1, 8.4)</a>; <a href="http://karpathy.github.io/2015/05/21/rnn-effectiveness/">Karpathy: Unreasonable Effectiveness of RNNs</a></td>
+            <td class="col-due">HW 3 due</td>
+            <td class="col-materials"><a href="lecture-materials/ds4440-f26-l11-RNNs.pdf">Notes</a> · <a href="https://colab.research.google.com/drive/14Lwb8TrSyD0D0kh-S04r3ynl2rHaYA4F?usp=sharing">Notebook</a></td>
+          </tr>
+
+          <tr class="holiday">
+            <td class="col-date">10/13 (M)</td>
+            <td class="col-topic">No class — University holiday</td>
+            <td class="col-readings"></td>
+            <td class="col-due"></td>
+            <td class="col-materials"></td>
+          </tr>
+
+          <tr>
+            <td class="col-date">10/15 (W)</td>
+            <td class="col-topic">Recurrent Neural Networks II</td>
+            <td class="col-readings"><a href="https://d2l.ai/chapter_recurrent-neural-networks/bptt.html">d2l: RNNs (8.7)</a></td>
+            <td class="col-due"></td>
+            <td class="col-materials"><a href="lecture-materials/ds4440-f26-l12-RNNs-2.pdf">Notes</a> · <a href="https://colab.research.google.com/drive/18UGgr3jiBMsXg1Kh758tk44QV9G0BCQl?usp=sharing">Notebook</a></td>
+          </tr>
+
+          <tr>
+            <td class="col-date">10/20 (M)</td>
+            <td class="col-topic">Transformers, self-supervision, contextualized embeddings</td>
+            <td class="col-readings"><a href="https://d2l.ai/chapter_attention-mechanisms-and-transformers/index.html">d2l, Ch. 11</a></td>
+            <td class="col-due"></td>
+            <td class="col-materials"><a href="lecture-materials/ds4440-f26-l13-transformers.pdf">Notes</a> · <a href="https://colab.research.google.com/drive/1lSkiJYTAyvr7DplETSKRBt5q1Z_Eb8tt?usp=sharing">Notebook</a></td>
+          </tr>
+
+          <tr>
+            <td class="col-date">10/22 (W)</td>
+            <td class="col-topic">More Transformers; BERT and BERTology</td>
+            <td class="col-readings"></td>
+            <td class="col-due">HW 4 due</td>
+            <td class="col-materials"><a href="lecture-materials/ds4440-f26-BERTology.pdf">Slides</a> · <a href="https://colab.research.google.com/drive/1BtNhIfDsW23K4cAaNp-Euvk9dARw1WB0?usp=sharing">Notebook: BERTish model</a> · <a href="https://colab.research.google.com/drive/15JinlErHD561QexDrBu7A6NGz3r7vV9B?usp=sharing">Notebook: BERTology</a></td>
+          </tr>
+
+          <tr>
+            <td class="col-date">10/27 (M)</td>
+            <td class="col-topic">Midterm review</td>
+            <td class="col-readings"></td>
+            <td class="col-due"></td>
+            <td class="col-materials"><a href="lecture-materials/ds4440-f26-midterm-review.pdf">Review exercises</a></td>
+          </tr>
+
+          <tr class="special">
+            <td class="col-date">10/29 (W)</td>
+            <td class="col-topic"><strong>Midterm</strong></td>
+            <td class="col-readings"></td>
+            <td class="col-due"></td>
+            <td class="col-materials"></td>
+          </tr>
+
+          <tr>
+            <td class="col-date">11/3 (M)</td>
+            <td class="col-topic">Modern Language Modeling: instruction tuning, RLHF, post-training</td>
+            <td class="col-readings"></td>
+            <td class="col-due"></td>
+            <td class="col-materials"><a href="lecture-materials/ds4440-f26-posttraining.pdf">Notes</a></td>
+          </tr>
+
+          <tr>
+            <td class="col-date">11/5 (W)</td>
+            <td class="col-topic">How do LLMs work? Interpretability</td>
+            <td class="col-readings"></td>
+            <td class="col-due"></td>
+            <td class="col-materials"></td>
+          </tr>
+
+          <tr class="holiday">
+            <td class="col-date">11/10 (M)</td>
+            <td class="col-topic">No class — University holiday</td>
+            <td class="col-readings"></td>
+            <td class="col-due"></td>
+            <td class="col-materials"></td>
+          </tr>
+
+          <tr>
+            <td class="col-date">11/12 (W)</td>
+            <td class="col-topic">TBD</td>
+            <td class="col-readings"></td>
+            <td class="col-due">Project proposals due</td>
+            <td class="col-materials"></td>
+          </tr>
+
+          <tr>
+            <td class="col-date">11/17 (M)</td>
+            <td class="col-topic">Guest lecture: Factuality and LLMs</td>
+            <td class="col-readings"></td>
+            <td class="col-due"></td>
+            <td class="col-materials"></td>
+          </tr>
+
+          <tr>
+            <td class="col-date">11/19 (W)</td>
+            <td class="col-topic">Diffusion Models</td>
+            <td class="col-readings"><a href="https://arxiv.org/abs/2406.08929">Step-by-Step Diffusion: An Elementary Tutorial</a></td>
+            <td class="col-due">HW 5 due</td>
+            <td class="col-materials"><a href="lecture-materials/ds4440-f26-diffusion.pdf">Notes</a> · <a href="https://colab.research.google.com/drive/1CZwksb-V3etnnl9wPPjPMWjIzT2QJwvb?usp=sharing">Notebook</a></td>
+          </tr>
+
+          <tr>
+            <td class="col-date">11/24 (M)</td>
+            <td class="col-topic">Ethical problems with generative models</td>
+            <td class="col-readings"></td>
+            <td class="col-due"></td>
+            <td class="col-materials"><a href="lecture-materials/ds4440-f26-fairness-robustness.pdf">Slides</a> · <a href="https://colab.research.google.com/drive/1k0Bb3Hx66o5LMT8dC1pYx9G_27wxBRRP?usp=sharing">Notebook</a></td>
+          </tr>
+
+          <tr class="holiday">
+            <td class="col-date">11/26 (W)</td>
+            <td class="col-topic">No class — Fall break</td>
+            <td class="col-readings"></td>
+            <td class="col-due"></td>
+            <td class="col-materials"></td>
+          </tr>
+
+          <tr>
+            <td class="col-date">12/1 (M)</td>
+            <td class="col-topic">Dedicated project feedback and help</td>
+            <td class="col-readings"></td>
+            <td class="col-due"></td>
+            <td class="col-materials"></td>
+          </tr>
+
+          <tr class="special">
+            <td class="col-date">12/3 (W)</td>
+            <td class="col-topic"><strong>Project presentations</strong></td>
+            <td class="col-readings"></td>
+            <td class="col-due"></td>
+            <td class="col-materials"></td>
+          </tr>
+
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  DS 4440 · Practical Neural Networks · Northeastern University · <a href="https://byronwallace.com">Byron Wallace</a>
+</footer>
+
+</body>
+</html>
