@@ -1,5 +1,5 @@
 title:
-Professor, Khoury College of Computer Sciences, Northeastern University
+Professor and Director of the BS in AI Program, Khoury College of Computer Sciences, Northeastern University
 
 interests:
 I work on natural language processing and machine learning, with applications in healthcare and other high-stakes domains. I am especially interested in model interpretability, analysis, and evaluation.
