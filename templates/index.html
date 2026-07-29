@@ -10,14 +10,9 @@
     <!-- Bio text + research interests together -->
     <div class="bio-text">
       <h1>{{ bio.name }}</h1>
-      <div class="bio-position">{{ bio.title_lines[0] }}</div>
-      {% if bio.title_lines|length > 1 %}
-      <div class="bio-roles">
-        {% for role in bio.title_lines[1:] %}
-        <span class="bio-role-badge">{{ role }}</span>
-        {% endfor %}
-      </div>
-      {% endif %}
+      {% for line in bio.title_lines %}
+      <div class="bio-position">{{ line }}</div>
+      {% endfor %}
       <div class="bio-interests">
         <div class="bio-interests-label">Research Interests</div>
         <p>{{ interests }}</p>

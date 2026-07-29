@@ -1,6 +1,6 @@
 title:
-Professor and Director of the BS in AI Program, Khoury College of Computer Sciences, Northeastern University
-Senior Advisor for AI Research
+Professor and Director of the BS in AI Program, Khoury College of Computer Sciences
+Senior Advisor for AI Research, Northeastern University
 
 interests:
 I work on natural language processing and machine learning, with applications in healthcare and other high-stakes domains. I am especially interested in model interpretability, analysis, and evaluation.
