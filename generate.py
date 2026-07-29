@@ -654,9 +654,14 @@ def load_students_txt():
 
 _BIO_INLINE_KEYS = {"email", "scholar", "bluesky", "twitter"}
 _BIO_BLOCK_KEYS  = {"title", "interests"}
+_BIO_BLOCK_JOIN  = {"title": "\n", "interests": " "}
 
 def load_bio_override():
-    """Read bio.txt. Returns dict with title, interests, email, scholar, bluesky, twitter."""
+    """Read bio.txt. Returns dict with title, interests, email, scholar, bluesky, twitter.
+
+    The "title" block keeps its line breaks (one appointment per line);
+    "interests" is collapsed into a single paragraph.
+    """
     path = SELF_DIR / "bio.txt"
     if not path.exists():
         return {}
@@ -670,7 +675,7 @@ def load_bio_override():
         m = re.match(r"^(" + "|".join(_BIO_INLINE_KEYS) + r"):\s*(.+)$", stripped)
         if m:
             if current_key:
-                result[current_key] = " ".join(current_lines).strip()
+                result[current_key] = _BIO_BLOCK_JOIN[current_key].join(current_lines).strip()
                 current_key = None
                 current_lines = []
             result[m.group(1)] = m.group(2).strip()
@@ -678,13 +683,13 @@ def load_bio_override():
         # Block keys (key: on its own line, content follows)
         if stripped.rstrip(":") in _BIO_BLOCK_KEYS and stripped.endswith(":"):
             if current_key:
-                result[current_key] = " ".join(current_lines).strip()
+                result[current_key] = _BIO_BLOCK_JOIN[current_key].join(current_lines).strip()
             current_key = stripped.rstrip(":")
             current_lines = []
         elif current_key and stripped:
             current_lines.append(stripped)
     if current_key:
-        result[current_key] = " ".join(current_lines).strip()
+        result[current_key] = _BIO_BLOCK_JOIN[current_key].join(current_lines).strip()
     return result
 
 
@@ -716,6 +721,7 @@ def generate(cv_dir, output_dir, fetch_arxiv=False):
     if "title" in override:
         bio["title_line"] = override["title"]
         print(f"  title: overridden from bio.txt")
+    bio["title_lines"] = [t for t in bio["title_line"].split("\n") if t.strip()]
     if "interests" in override:
         interests = override["interests"]
         print(f"  interests: overridden from bio.txt")
