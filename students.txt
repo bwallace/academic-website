@@ -37,9 +37,11 @@ status: current
 image: rice.jpeg
 
 [Alberto Mario Ceballos-Arroyo]
-status: current
+status: alumni
 link: https://alceballosa.github.io/
+graduation: 2026
 image: alberto.jpg
+now: Postdoc, Cornell
 info: Co-advised with Huaizu Jiang
 
 [Hye Sun Yun]
