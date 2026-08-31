@@ -42,6 +42,7 @@ link: https://alceballosa.github.io/
 graduation: 2026
 image: alberto.jpg
 now: Postdoc, Cornell
+thesis: Improving the detection of aneurysms in 3D radiology scans through anatomically-informed deep learning
 info: Co-advised with Huaizu Jiang
 
 [Hye Sun Yun]
