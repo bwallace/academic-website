@@ -27,6 +27,12 @@ image: sheridan.jpeg
 link: https://sfeucht.github.io/
 info: Co-advised with David Bau
 
+[Michael Li]
+status: current
+image: michael.jpeg
+link: https://ml5885.github.io/
+info: Co-advised with David Bau
+
 [Zihao (Gavin) Yang]
 status: current
 image: gavin.jpg
